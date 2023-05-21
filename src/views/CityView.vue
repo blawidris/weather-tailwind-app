@@ -1,12 +1,16 @@
 <template lang="">
     <div>
-        
+        <Suspense>
+            <AsyncCityView/>
+        </Suspense>
     </div>
 </template>
 
 
-<script>
-export default {
+<script setup>
+import AsyncCityView from '@/components/AsyncCityView';
+
+// export default {
     
-}
+// }
 </script>
