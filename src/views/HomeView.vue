@@ -73,13 +73,13 @@ export default {
 
       const [city, state] = item.place_name.split(',')
 
-      // console.log(item)
+      console.log(city, state, item)
       router.push({
         name: 'cityView',
-        params: {state: state.replaceAll(" ", ""), city: city.replaceAll(' ', '-')},
+        params: { city: city.replaceAll(" ","-"), state: state.replaceAll(" ", "")},
         query:{
-          lat: item.geometry.coordinates[1],
-          lng: item.geometry.coordinates[0],
+          lat: item.geometry.coordinates[0],
+          lng: item.geometry.coordinates[1],
           preview:true
         }
       })

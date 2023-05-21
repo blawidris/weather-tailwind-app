@@ -2,6 +2,12 @@
     <div>
         <Suspense>
             <AsyncCityView/>
+
+            <template #fallback>
+                <div>
+                    loading...
+                </div>
+            </template>
         </Suspense>
     </div>
 </template>
